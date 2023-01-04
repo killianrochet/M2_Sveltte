@@ -8,8 +8,10 @@ Thomas Legrand
 Pour l'installation : 
 
 ```bash
-# Clone le repo
-git clone git@github.com:killianrochet/M2_Sveltte.git
+# Fork le Repo sur git 
+
+#Ensuite clone le repo avec ça
+git clone git@github.com:"Ton truc à toi"
 
 # Va dans le dossier sveltekit-actions
 cd sveltekit-actions
