@@ -1,0 +1,13 @@
+[
+    {
+        "identifiant": "killian",
+        "password": "123456",
+        "segmentation":{}
+    },
+    {
+        "identifiant": "test",
+        "password": "test",
+        "segmentation":{
+        }
+    }
+]

@@ -1,0 +1,38 @@
+<script>
+  import productsJSON from './products.json';
+  import Header from '../../components/Header.svelte';
+  import { setContext } from 'svelte';
+  import { getContext } from 'svelte';
+  import * as service from './[id]/product.js';
+
+
+  const products = JSON.parse(JSON.stringify(productsJSON));
+</script>
+
+<style>
+  #cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); /* 3 colonnes de 300 pixels minimum et 1 fraction de la largeur restante */
+    grid-gap: 20px; /* espace entre chaque carte */
+    margin-top: 30px;
+  }
+
+  .card {
+    width: 100%; /* la largeur de chaque carte sera définie par grid-template-columns */
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+  }
+</style>
+
+<Header />
+<div id="cards-container" class="grid grid-cols-3">
+  {#each products as product}
+    <a href={`/products/${product.id}`} class="card" on:click={service.getInfoProduct(product)}>
+      <h2 class="text-xl font-bold">{product.name}</h2>
+      <p class="text-lg font-bold">Marque : {product.brand}</p>
+      <img src="{product.imageUrl}" alt="{product.name}" class="w-full">
+    </a>
+  {/each}
+</div>
