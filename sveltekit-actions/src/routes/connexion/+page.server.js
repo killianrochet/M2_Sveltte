@@ -1,14 +1,9 @@
 import { invalid, redirect } from "@sveltejs/kit";
 import data from './user.json';
-import { writable } from 'svelte-local-storage-store';
+import { writable } from 'svelte/store';
+import { browser } from "$app/environment";
 import { get } from 'svelte/store';
 import { onMount } from 'svelte';
-import { getUserSegmentation } from "./connexion";
-
-
-export const utilisateur = writable('utilisateur', {
-  username: null
-})
 
 export const actions = {
   create: async ({ request }) => {
@@ -20,7 +15,6 @@ export const actions = {
     const user_data = JSON.parse(JSON.stringify(data));
     let res = user_data.find(personne =>{
       if(personne.identifiant.localeCompare(user, undefined, {sensitivity: 'base'}) === 0){
-        getUserSegmentation(personne);
         return personne.password.localeCompare(password, undefined, {sensitivity: 'base'}) === 0;
       }
     })
@@ -35,7 +29,7 @@ export const actions = {
     }
     
     else{
-      console.log(res)
+      console.log("Connecter")
     }
     
     throw redirect(303, '/')

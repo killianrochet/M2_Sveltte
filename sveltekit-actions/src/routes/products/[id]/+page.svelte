@@ -8,10 +8,11 @@
   import { onMount } from 'svelte';
   import { writable } from 'svelte-local-storage-store';
   import * as service from './product.js';
+	import { each } from 'svelte/internal';
+  import { browser } from '$app/environment';
 
   let product ;
   let recommended;
-
 
   function refreshPage(id){
     navigate(`/products/${id}`);
@@ -19,13 +20,30 @@
   }
 
   const getProduct = () => {
+  if(browser){
+    const userSegmentation = JSON.parse(localStorage.getItem("Segmentation"));
+    let distance = 0;
     const products = JSON.parse(JSON.stringify(productsJSON));
+    const distances = [];
+    for(const prod of products){
+      if (prod.id === $page.params.id) {
+        // Si le produit courant est le produit de la page actuelle, on passe au produit suivant
+        continue;
+      }
+      for (const key of Object.keys(userSegmentation)) {
+        distance += Math.pow(userSegmentation[key] - prod.segmentation[key], 2);
+      }
+      distance = Math.sqrt(distance);
+      console.log(prod.name + " " + distance);
+      distances.push({product: prod, distance});
+      distance = 0;
+    }
+    distances.sort((a, b) => a.distance - b.distance);
+    recommended = distances.slice(0, 3).map(d => d.product);
     product = products.find((p) => p.id === $page.params.id);
-    service.getInfoProduct(product);
-    recommended = products.slice(0, 3);
   }
-  getProduct();
-  
+}
+  getProduct();  
 </script>
 
 <style>

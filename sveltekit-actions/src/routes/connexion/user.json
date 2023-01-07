@@ -2,7 +2,8 @@
     {
         "identifiant": "killian",
         "password": "123456",
-        "segmentation":{}
+        "segmentation": {
+        }
     },
     {
         "identifiant": "test",

@@ -11,21 +11,30 @@
 	import { enhance, applyAction } from '$app/forms';
 	import Alert from '../../lib/components/Alert.svelte';
 	import { onMount } from 'svelte';
+	import data from './user.json';
+
+
 	export let form;
 	export let test;
-
+	const user_data = JSON.parse(JSON.stringify(data));
+	console.log(user_data);
 
 	test = 15;
 	let value;
 
 	let connected;
 	connected = !!(localStorage.getItem("Utilisateur"));
-	console.log(connected);
 
 	function storeUser(){
 		const input = document.getElementById('userInput');
 		value = input.value;
 		localStorage.setItem("Utilisateur", value);
+		for (const obj of user_data){
+			if(obj.identifiant === value && obj.hasOwnProperty('segmentation')){
+				localStorage.setItem("Segmentation", JSON.stringify(obj.segmentation));
+				break;
+			}
+		}
 	}
   </script>
   

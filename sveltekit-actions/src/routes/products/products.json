@@ -3,6 +3,7 @@
         "name": "Velo d'appartement",
         "brand": "Domyos",
         "id": "1",
+        "value": "",
         "imageUrl": "https://imgs.search.brave.com/t3JVuGZA4ExpQsflwdw7iD2IbgAdwYCUMfMsfzmtueU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9tZWRp/YS5hbGx0cmlja3Mu/Y29tL2hkLzE0NjU3/OTY1ZTQ3MjQ2Njhk/ZjBkOC4zODUyODUw/Ny5qcGc",
         "segmentation": {
           "age1": 1,
@@ -19,6 +20,7 @@
         "name": "Club de golf",
         "brand": "Domyos",
         "id": "2",
+        "value": "",
         "imageUrl": "https://imgs.search.brave.com/7Ymlruje08jMFCmVP55uI9a6rigxBpmAQsdqf5uZWC8/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jb250/ZW50cy5tZWRpYWRl/Y2F0aGxvbi5jb20v/cDE3MDg4NDgvMjAw/MHgyMDAwL3NxL2tp/dF9kZV9nb2xmXzdf/Y2x1YnNfYWR1bHRl/XzEwMF9kcm9pdGll/cl90YWlsbGVfMl9p/bmVzaXNfZ29sZl84/NTQ0ODc4XzE3MDg4/NDguanBnP2s9MTgx/MWFmYmFmNGU0ZGE3/YTUwZWI5Y2U2NjVm/NWRkYTQ",
         "segmentation": {
           "age1": 0,
@@ -35,6 +37,7 @@
       "name": "Tapis de yoga",
       "brand": "Domyos",
       "id": "3",
+      "value": "",
       "imageUrl": "https://imgs.search.brave.com/0j8UL_Wk2O0_fRptMOkQGiIYIwfJPpl_JRwZs-V69FA/rs:fit:1001:1001:1/g:ce/aHR0cHM6Ly9tZWRp/YS5jZG53cy5jb20v/X2kvNTYzNjcvNzYx/MC8xNDY0LzExL3Rh/cGlzLWRlLXlvZ2Et/ZXBhaXMuanBlZw",
       "segmentation": {
         "age1": 1,
@@ -51,6 +54,7 @@
       "name": "Casque de vélo pour enfant",
       "brand": "Btwin",
       "id": "4",
+      "value": "",
       "imageUrl": "https://imgs.search.brave.com/nh6Jbts7bln0EnLI57CTefXpBS2RKKtyg-mqJs-N8x0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9tZWRp/YS5kZWNhcHJvLmNv/bS9MYXJnZS8wNy8x/NC8wNzE0NDI5Y2M2/NjM0ODJjYjlkZTUx/OWU0MzE2ZDBlZi5q/cGc",
       "segmentation": {
         "age1": 10,
@@ -67,6 +71,7 @@
     "name": "Ballon de foot",
     "brand": "Kypsta",
     "id": "5",
+    "value": "",
     "imageUrl":"https://imgs.search.brave.com/alhl2of4d_QnOt408AwSVlZy553TXNBPl1NZvF21Oik/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxeHA2JTJCNFVz/MkwuX0FDX1NMMTQz/Nl8uanBn",
     "segmentation": {
       "age1": 7,
@@ -83,6 +88,7 @@
     "name": "Raquettes a neige",
     "brand": "Forclaz",
     "id": "6",
+    "value": "",
     "imageUrl": "https://imgs.search.brave.com/JmA6Wex7pRlzmukrpiPc0w4PqstCNVEBYNSgpnZIDLE/rs:fit:1200:1179:1/g:ce/aHR0cHM6Ly93d3cu/c2l0ZS1hbm5vbmNl/LmZyL3NoLWltZy9y/YXF1ZXR0ZS1uZWln/ZS0yLmpwZw",
     "segmentation": {
       "age1": 1,

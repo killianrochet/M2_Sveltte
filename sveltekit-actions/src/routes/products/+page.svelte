@@ -1,12 +1,10 @@
 <script>
   import productsJSON from './products.json';
   import Header from '../../components/Header.svelte';
-  import { setContext } from 'svelte';
-  import { getContext } from 'svelte';
-  import * as service from './[id]/product.js';
-
+  import * as service from './products.js';
 
   const products = JSON.parse(JSON.stringify(productsJSON));
+  const userSegmentation = JSON.parse(localStorage.getItem("Segmentation"));
 </script>
 
 <style>
@@ -29,10 +27,12 @@
 <Header />
 <div id="cards-container" class="grid grid-cols-3">
   {#each products as product}
-    <a href={`/products/${product.id}`} class="card" on:click={service.getInfoProduct(product)}>
+  <div on:click={() => service.getProduct(product, userSegmentation)} bind:this={product.value}>
+    <a href={`/products/${product.id}`} class="card">
       <h2 class="text-xl font-bold">{product.name}</h2>
       <p class="text-lg font-bold">Marque : {product.brand}</p>
       <img src="{product.imageUrl}" alt="{product.name}" class="w-full">
     </a>
+  </div>
   {/each}
 </div>
