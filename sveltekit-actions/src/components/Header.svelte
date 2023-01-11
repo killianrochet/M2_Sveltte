@@ -1,10 +1,10 @@
 
 <style>
     nav {
-    position: fixed; /* ajoutez cette ligne */
-    top: 0; /* ajoutez cette ligne */
-    left: 0; /* ajoutez cette ligne */
-    right: 0; /* ajoutez cette ligne */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0;
     background-color: #333;
     color: #fff;
     }
@@ -23,7 +23,7 @@
   
     nav a {
       display: block;
-      padding: 20px;
+      padding: 10%;
       color: #fff;
       text-decoration: none;
     }
@@ -43,7 +43,7 @@
   <nav>
     <ul>
       <li><a href="/">Accueil</a></li>
-      <li><a href="/products">Liste des produits</a></li>
+      <li><a href="/products">Produits</a></li>
       {#if typeof localStorage !== "undefined" && localStorage.getItem("Utilisateur")}
         <li><a href="/">Déconnexion</a></li>
       {:else}

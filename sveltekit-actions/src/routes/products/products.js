@@ -1,6 +1,4 @@
 
-
-
 export let inputProduct = 0
 
 export function getProduct(product, userSegmentation){
